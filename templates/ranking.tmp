@@ -1,0 +1,83 @@
+<div class="rank">
+<div class="rank-container">
+<div class="rank{##rank##}"><a href="{##リンク先URL##}" target="_blank">{##タイトル##}</a></div>
+<div class="float-l">
+{##画像1##}
+{##画像2##}
+{##画像3##}
+</div>
+<div class="rank-inner">
+<div class="rankbox">
+<div class="feature">{##説明文1タイトル##}</div>
+<div class="rnkbody">{##説明文1##}</div>
+{if:テーブル用項目}
+<div class="rank-table">
+<table>
+<tbody>
+{if:基本項目}
+<tr>
+<th><div>価格</div></th>
+<td><span class="rank-price">{##価格##}</span>{##単位##}</td>
+</tr>
+<tr>
+<th><div>評価</div></th>
+<td>{##評価画像##}</td>
+</tr>
+<tr>
+<th><div>備考</div></th>
+<td>{##備考##}</td>
+</tr>
+{/if:基本項目}
+{if:フリー項目1}
+<tr>
+<th><div>{##フリー項目1_タイトル##}</div></th>
+<td>{##フリー項目1##}</td>
+</tr>
+{/if:フリー項目1}
+{if:フリー項目2}
+<tr>
+<th><div>{##フリー項目2_タイトル##}</div></th>
+<td>{##フリー項目2##}</td>
+</tr>
+{/if:フリー項目2}
+{if:フリー項目3}
+<tr>
+<th><div>{##フリー項目3_タイトル##}</div></th>
+<td>{##フリー項目3##}</td>
+</tr>
+{/if:フリー項目3}
+{if:フリー項目4}
+<tr>
+<th><div>{##フリー項目4_タイトル##}</div></th>
+<td>{##フリー項目4##}</td>
+</tr>
+{/if:フリー項目4}
+{if:フリー項目5}
+<tr>
+<th><div>{##フリー項目5_タイトル##}</div></th>
+<td>{##フリー項目5##}</td>
+</tr>
+{/if:フリー項目5}
+{if:フリー項目6}
+<tr>
+<th><div>{##フリー項目6_タイトル##}</div></th>
+<td>{##フリー項目6##}</td>
+</tr>
+{/if:フリー項目6}
+</tbody>
+</table>
+</div>
+{/if:テーブル用項目}
+</div>
+{if:説明文2}
+<div class="comment">
+<div class="comment-inner">
+<div class="comment-tit"><span>{##説明文2タイトル##}</span></div>
+<div class="comment-body">{##説明文2##}</div>
+</div>
+</div>
+{/if:説明文2}
+<div class="more">{if:ページURL}<span><a href="{##ページURL##}">詳細ページはこちら</a></span>{/if:ページURL}<span class="official"><a href="{##リンク先URL##}" target="_blank">公式ページはこちら</a></span></div>
+</div>
+</div>
+</div>

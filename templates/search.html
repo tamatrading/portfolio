@@ -1,0 +1,86 @@
+<$ AllStrReplace(<h2>(.*?)</h2>,<h2><span>$1</span></h2>) $>
+<$ AllStrReplace(<h3>(.*?)</h3>,<h3><span>$1</span></h3>) $>
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+<head>
+<meta charset="<% publishCharset %>" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>%%%keywords%%%の検索結果-<% pageTitle %></title>
+<meta name="keywords" content="%%%keywords%%%" />
+<meta name="description" content="%%%keywords%%%の検索結果" />
+<link rel="stylesheet" href="<% pageDepth %>styles.css" type="text/css" />
+<link rel="stylesheet" href="<% pageDepth %>css/textstyles.css" type="text/css" />
+<% scriptUrl %>
+<% pageStyles %>
+<% headTag %>
+<% rssFeedLink %>
+<% mobileLinkDiscovery %>
+<meta name="robots" content="noindex,follow" />
+</head>
+<body>
+<div id="wrapper">
+<header>
+<div id="top">
+<div class="inner">
+<% pageTopic3 %>
+<input type="checkbox" id="panel" value="" />
+<label for="panel" id="topmenubtn">MENU</label>
+<div id="topmenubox">
+<% searchTag | str_replace(<!-- ★comment★ -->,) | str_replace(text,search) | str_replace(image,submit) | tag_insert(div id="searchbox") %>
+<% topMenu2 | tag_replace(div,nav) %>
+</div>
+</div>
+</div>
+<!-- ★ヘッダー画像エリアここから★ -->
+<div id="header">
+<% pageHeaderImage2 %>
+<div id="headertxt">
+<h2 class="title"><a href="<% pageDepth %>">検索結果</a></h2>
+
+</div>
+</div>
+<!-- ★ヘッダー画像エリアここまで★ -->
+</header>
+
+<div id="column1">
+<div id="contents">
+<div id="layoutbox">
+<div id="main">
+<% searchNavigation %>
+<% freeSpace1 %>
+<h3>%%%keywords%%%の検索結果</h3>
+<div id="searchresult">
+%%%result%%%
+</div>
+<% freeSpace2 %>
+</div>
+
+<!-- ★メインメニューここから★ -->
+<div id="menu">
+
+<% freeSpace3 | tag_replace(h4,div class="title") | tag_insert_inner(div class="title",span) %>
+<% pickupEntry %>
+<% siteMenu2  | tag_insert_inner(h4,span) %>
+<% freeSpace4 | tag_replace(h4,div class="title") | tag_insert_inner(div class="title",span) %>
+
+</div>
+<!-- ★メインメニューここまで★ -->
+
+</div>
+
+</div>
+</div>
+
+<!-- ★フッターここから★ -->
+<footer id="footer">
+
+<% footerMenu %>
+<p id="footsub"><% PRLink | tag_insert(span) %><% sitemapPageLink | tag_insert(span) %></p>
+<small>Copyright &copy; <% thisYear %> <% siteTitle %>All Rights Reserved.<% accessAnalyzer %></small>
+</footer>
+<!-- ★フッターここまで★ -->
+
+</div>
+</body>
+</html>
